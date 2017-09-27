@@ -1,160 +1,130 @@
-.topic-list > tbody > tr:nth-child(odd) {
-    background-color: white;
-}
-
-
-.topic-list > tbody tr:not(.last-visit):not(.topic-list-item-separator) td {
-    border-bottom: 1px solid #eee;
-}
-
-.topic-list a.title:not(.badge-notification) {
-    color: #3b5998;
-    font-weight: normal;
-    font-family: 'Helvetica Neue', Helvetica, Arial, Utkal, sans-serif;
-    font-size: 18px;
-}
-
-.topic-list a.title:not(.badge-notification):hover {
-    text-decoration: underline;
-}
-
-.topic-list .creator, .topic-list .editor {
-    font-size: 13px;
-    display: block;
-    margin-top: 3px;
-}
-
-.topic-list .main-link {
-    width: auto;
-}
-
-.topic-list {
-    td, .creator a, .editor a {
-        color: #888;
+#most-recent-posts-widget {
+  li {
+    border-bottom: 1px solid #0e1717;
+    padding: 1px 0 3px 0;
+    &:hover {
+      background: #0e1717;
     }
-}
-
-.topic-list td {
-    padding-bottom: 10px;
-}
-
-.topic-list th {
-    color: black;
-    background-color: #fafafa;
-}
-.topic-list {
-    border-top: none;
-}
-
-.topic-list td:first-of-type {
-    padding-bottom: 10px;
-    padding-left: 10px;
-    padding-top: 10px;
-}
-
-.topic-list tr.topic-list-item-separator td:first-of-type {
-    padding: 0;
-}
-
- 
-.topic-list {
-    .fa-tag {
-        opacity: 0.7;
-        font-size: 10px;
-        margin-right: -2px;
+  }
+  ul {
+    list-style: none;
+    margin: 0;
+    a {
+      display: block;
+      overflow: hidden;
+      text-decoration: none;
+      text-overflow: ellipsis;
+      transition: white-space 1s ease-out;
+      white-space: nowrap;
     }
-    .num.posts-map {
-        position: relative;
-        font-size: 17px;
-        a {
-            color: #888 !important;
-            font-weight: normal;
-        }
-        a.heatmap-high {
-            color: #c66 !important;   
-        }
-        width: 100px;
+    li:hover a {
+      color: #779ecb;
+      display: initial;
+      overflow: initial;
+      text-overflow: initial;
+      white-space: normal;
     }
+  }
 }
 
-.topic-list td.last-post, .topic-list th.activity {
-    width: 160px;
-    .relative-date {
-        color: #666;
-    }
+#topic-title, .posts-wrapper, aside.quote .title, blockquote, .list-controls .category-dropdown-menu, .babble-menu .babble-chat, .menu-panel.drop-down, .main-content {
+  background: #000;
 }
 
-.topic-list .creator .relative-date {
-    margin-left: 8px;
-}
-
-.badge-category-bg {
-    opacity: 0.8;
-}
-
-.topic-list .badge-wrapper.bar {
-    .badge-category {
-      color: #9a9a9a !important;
-      font-weight: 600;
-      font-size: 12px;
-      padding: 2px 6px;
-    }
-    .badge-category-bg {
-        top: -1px;
-    }
-}
-
-.last-post {
-    .poster-avatar {
-        margin-right: 10px;
-    }
-    .poster-avatar, .poster-info {
-        float: left;
-    }
-}
-
-.topic-list .posts {
-    width: auto;
-}
-
-/* topic page */
-#topic-progress {
-    background-color: #f1f1f1;
-    color: #666;
-    font-weight: normal;
-    .bg {
-       background-color: #bee9e9;
-    }
-}
-
-nav.post-controls button.has-like {
-    color: #08c;
+.babble-post:hover {
+  background: #093145;
 }
 
 .badge-wrapper.bullet span.badge-category {
-    color: #333 !important;
+  color: #FFF;
+  color: #FFF;
 }
 
-.creator .badge-wrapper.bullet span.badge-category {
-    color: #888 !important;
-    margin-top: -2px;
+aside.quote .title, .d-header .icons .unread-notifications, .extra-info-wrapper .badge-wrapper.bullet span.badge-category {
+  color: #FFF;
 }
 
-img.avatar {
-    border-radius: 3px;
+.d-header .title img {
+  -webkit-filter: invert(1);
+  filter: invert(1);
 }
 
-#suggested-topics td.main-link {
-    width: 500px;
+.dl-custom-content {
+  /*position: fixed;*/
+  width: 230px;
 }
 
-.topic-list a.title.visited:not(.badge-notification) {
-    color: #6644aa;
+.docked .d-header {
+  border-bottom: 1px solid white;
 }
 
+.extra-info-wrapper {
+  padding-left: 10px;
+}
 
-.topic-list-item .discourse-tags {
-    font-size: 0.75em;
-    display: inline-block;
-    margin-left: 5px;
+.main-content {
+  &.has-sidebars {
+    width: calc(100% - 245px);
+  }
+  &.topic.has-sidebars {
+    border: 1px solid white;
+    #topic-title .container .title-wrapper .badge-wrapper {
+      display: block;
+    }
+    .topic-post > .boxed > .row {
+      border-bottom: 1px solid #3C6478;
+    }
+  }
+}
+
+.nav-pills > li {
+  &.active > a, > a.active {
+    background: #000;
+    border: 1px solid #3C6478;
+  }
+}
+
+a {
+  color: #20C20E;
+  &:visited {
+    color: #20C20E;
+  }
+  &.mention {
+    padding: 2px 6px;
+  }
+}
+
+aside {
+  &.quote {
+    border: 1px solid #F58B4C;
+  }
+  &.sidebar {
+    width: 225px;
+  }
+}
+
+@import url('https://fonts.googleapis.com/css?family=Inconsolata');
+
+@media only screen and (min-width: 1025px) {
+  div.sidebar {
+    position: fixed;
+  }
+}
+
+body {
+  background-color: #000;
+  color: #CCC;
+  font-family: 'Inconsolata', monospace;
+}
+
+header {
+  background: #000;
+}
+
+html, body {
+  overflow: auto;
+}
+
+li b {
+  text-decoration: underline;
 }
