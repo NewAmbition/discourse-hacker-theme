@@ -1,2 +1,2 @@
-## Darren's Hacker discourse theme
+## H@cker discourse theme
 
